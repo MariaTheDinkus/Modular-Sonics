@@ -18,31 +18,35 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
 import com.momnop.modularsonics.ModularSonicDevicesCreativeTab;
-import com.momnop.modularsonics.api.SonicType;
+import com.momnop.modularsonics.ModularSonicModulesCreativeTab;
+import com.momnop.modularsonics.api.ModuleType;
 
 import cpw.mods.fml.common.gameevent.InputEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemSonicScrewdriver extends Item {
+public class ItemSonicModule extends Item {
 	
-	private SonicType sonicType;
+	private ModuleType moduleType;
 
-	public ItemSonicScrewdriver(String unlocalizedName, SonicType sonicType) {
+	public ItemSonicModule(String unlocalizedName, ModuleType moduleType) {
 		super();
-		setCreativeTab(ModularSonicDevicesCreativeTab.INSTANCE);
+		setCreativeTab(ModularSonicModulesCreativeTab.INSTANCE);
 		setUnlocalizedName(unlocalizedName);
 		setMaxStackSize(1);
-		this.sonicType = sonicType;
+		this.moduleType = moduleType;
+	}
+
+	@SideOnly(Side.CLIENT)
+	@Override
+	public void registerIcons(IIconRegister register) {
+		this.itemIcon = register.registerIcon("sonicscrewdriver" + ":"
+				+ getUnlocalizedName().substring(5));
 	}
 	
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {
-	    return this.getUnlocalizedName() + "_" + stack.getItemDamage();
-	}
-	
-	public SonicType getSonicType() {
-		return sonicType;
+	    return this.getUnlocalizedName();
 	}
 	
 	@Override
@@ -50,22 +54,11 @@ public class ItemSonicScrewdriver extends Item {
 	public void addInformation(ItemStack itemStack, EntityPlayer player,
 			List info, boolean useInfo) {
 		NBTTagCompound tag = itemStack.stackTagCompound;
-		info.add("Casing: " + sonicType.toString());
-		if (itemStack.stackTagCompound != null) {
-            info.add("Owner: " + tag.getString("owner"));
-		}
+		info.add("Module is For: " + moduleType.toString());
 	}
 	
-	@Override
-	public void onCreated(ItemStack stack, World world, EntityPlayer entityPlayer) {
-		stack.stackTagCompound = new NBTTagCompound();
-		NBTTagCompound tag = stack.stackTagCompound;
-		tag.setString("owner", entityPlayer.getDisplayName());
-	}
-	
-	public void setBoolString(NBTTagCompound tag, String name, boolean bool, String string) {
-		tag.setBoolean(name, bool);
-		tag.setString(name, string);
+	public ModuleType getModuleType() {
+		return moduleType;
 	}
 	
 	public boolean onItemUse(ItemStack itemStack, EntityPlayer p_77648_2_, World p_77648_3_, int p_77648_4_, int p_77648_5_, int p_77648_6_, int p_77648_7_, float p_77648_8_, float p_77648_9_, float p_77648_10_)

@@ -1,4 +1,5 @@
-itemGroup.sonicscrewdriver=Modular Sonics
+itemGroup.sonicDevices=Modular Sonics: Sonic Devices
+itemGroup.sonicModules=Modular Sonics: Sonic Modules
 
 item.ninthSonic_0.name=Sonic Screwdriver: Inactive
 item.ninthSonic_1.name=Sonic Screwdriver: Redstone Mode
@@ -17,3 +18,11 @@ item.tenthSonic_4.name=Sonic Screwdriver: Ignition Mode
 item.tenthSonic_5.name=Sonic Screwdriver: Downfall Mode
 item.tenthSonic_6.name=Sonic Screwdriver: Interdiction Mode
 item.tenthSonic_7.name=Sonic Screwdriver: Slow Descent Mode
+
+item.redstoneModule.name=Redstone Module
+item.blockScanningModule.name=Block Scanning Module
+item.mobScanningModule.name=Mob Scanning Module
+item.ignitionModule.name=Ignition Module
+item.toggleDownfallModule.name=Toggle Downfall Module
+item.interdictionModule.name=Interdiction Module
+item.featherFallingModule.name=Feather Falling Module

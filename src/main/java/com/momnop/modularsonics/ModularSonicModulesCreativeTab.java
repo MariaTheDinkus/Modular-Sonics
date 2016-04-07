@@ -11,18 +11,18 @@ import com.momnop.interdictionpillar.blocks.BlockHandler;
 import com.momnop.interdictionpillar.info.ModInfo;
 import com.momnop.modularsonics.items.ModularSonicsItems;
 
-public class ModularSonicsCreativeTab extends CreativeTabs {
+public class ModularSonicModulesCreativeTab extends CreativeTabs {
 
 	List list;
-	public static ModularSonicsCreativeTab INSTANCE = new ModularSonicsCreativeTab();
+	public static ModularSonicModulesCreativeTab INSTANCE = new ModularSonicModulesCreativeTab();
 
-	public ModularSonicsCreativeTab() {
-		super("sonicscrewdriver");
+	public ModularSonicModulesCreativeTab() {
+		super("sonicModules");
 	}
 
 	@Override
 	public ItemStack getIconItemStack() {
-		return new ItemStack(ModularSonicsItems.ninthSonic);
+		return new ItemStack(ModularSonicsItems.redstoneModule);
 	}
 
 	@Override
@@ -33,9 +33,14 @@ public class ModularSonicsCreativeTab extends CreativeTabs {
 	@Override
 	public void displayAllReleventItems(List list) {
 		this.list = list;
-
-		this.addItem(ModularSonicsItems.ninthSonic);
-		this.addItem(ModularSonicsItems.tenthSonic);
+		
+		this.addItem(ModularSonicsItems.redstoneModule);
+		this.addItem(ModularSonicsItems.blockScanningModule);
+		this.addItem(ModularSonicsItems.mobScanningModule);
+		this.addItem(ModularSonicsItems.ignitionModule);
+		this.addItem(ModularSonicsItems.toggleDownfallModule);
+		this.addItem(ModularSonicsItems.interdictionModule);
+		this.addItem(ModularSonicsItems.featherFallingModule);
 	}
 
 	private void addItem(Item item) {
