@@ -1,0 +1,15 @@
+[
+    {
+        "modid":"sonicscrewdriver",
+        "name":"Modular Sonics",
+        "description":"A mod that adds all kinds of sonic devices from the popular Doctor Who show.",
+        "version":"1.0.0",
+        "mcversion":"1.7.10",
+        "updateUrl":"",
+        "authorList":[
+         "Zundrel"
+        ],
+        "credits":"Zundrel",
+        "screenshots":[]
+    }
+]
