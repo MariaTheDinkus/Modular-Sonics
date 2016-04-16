@@ -7,7 +7,9 @@ import org.lwjgl.opengl.GL11;
 
 import akka.japi.Effect;
 
+import com.momnop.modularsonics.api.ModuleFunctionType;
 import com.momnop.modularsonics.items.ItemSonicScrewdriver;
+import com.momnop.modularsonics.items.ModularSonicsItems;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.InputEvent;
@@ -109,7 +111,12 @@ public class ModEventHandler {
 				|| event.entityPlayer.getHeldItem() != null
 				&& event.entityPlayer.getHeldItem().getItem() instanceof ItemSonicScrewdriver
 				&& event.action != event.action.LEFT_CLICK_BLOCK
-				&& event.entityPlayer.getHeldItem().stackTagCompound == null) {
+				&& event.entityPlayer.getHeldItem().stackTagCompound == null
+				|| event.entityPlayer.getHeldItem() != null
+				&& event.entityPlayer.getHeldItem().getItem() instanceof ItemSonicScrewdriver
+				&& event.action != event.action.LEFT_CLICK_BLOCK
+				&& event.entityPlayer.getHeldItem().stackTagCompound != null
+				&& event.entityPlayer.getHeldItem().stackTagCompound.getString("owner").isEmpty()) {
 			if (event.entityPlayer.isSneaking() == false
 					&& event.entityPlayer.getHeldItem().getItemDamage() == 1
 					&& event.action == event.action.RIGHT_CLICK_BLOCK) {
@@ -398,7 +405,12 @@ public class ModEventHandler {
 				|| event.entityPlayer.getHeldItem() != null
 				&& event.entityPlayer.getHeldItem().getItem() instanceof ItemSonicScrewdriver
 				&& event.action == event.action.RIGHT_CLICK_AIR
-				&& event.entityPlayer.getHeldItem().stackTagCompound == null) {
+				&& event.entityPlayer.getHeldItem().stackTagCompound == null
+				|| event.entityPlayer.getHeldItem() != null
+				&& event.entityPlayer.getHeldItem().getItem() instanceof ItemSonicScrewdriver
+				&& event.action == event.action.RIGHT_CLICK_AIR
+				&& event.entityPlayer.getHeldItem().stackTagCompound != null
+				&& event.entityPlayer.getHeldItem().stackTagCompound.getString("owner").isEmpty()) {
 			if (event.entityPlayer.isSneaking()) {
 				if (event.entityPlayer.getHeldItem().getItemDamage() == 7) {
 					event.entityPlayer.getHeldItem().setItemDamage(0);

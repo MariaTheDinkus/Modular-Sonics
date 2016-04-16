@@ -1,5 +1,6 @@
 package com.momnop.modularsonics.items;
 
+import com.momnop.modularsonics.api.ModuleFunctionType;
 import com.momnop.modularsonics.api.ModuleType;
 import com.momnop.modularsonics.api.SonicType;
 
@@ -16,16 +17,16 @@ public class ModularSonicsItems
 	
 	public static void load()
     {
-		ninthSonic = new ItemSonicScrewdriver("ninthSonic", SonicType.NINTH);
+		ninthSonic = new ItemSonicScrewdriver("ninthSonic", SonicType.NINTHTENTH);
         tenthSonic = new ItemSonicScrewdriver("tenthSonic", SonicType.TENTH);
         
-        redstoneModule = new ItemSonicModule("redstoneModule", ModuleType.SCREWDRIVER);
-        blockScanningModule = new ItemSonicModule("blockScanningModule", ModuleType.SCREWDRIVER);
-        mobScanningModule = new ItemSonicModule("mobScanningModule", ModuleType.SCREWDRIVER);
-        ignitionModule = new ItemSonicModule("ignitionModule", ModuleType.SCREWDRIVER);
-        toggleDownfallModule = new ItemSonicModule("toggleDownfallModule", ModuleType.SCREWDRIVER);
-        interdictionModule = new ItemSonicModule("interdictionModule", ModuleType.SCREWDRIVER);
-        featherFallingModule = new ItemSonicModule("featherFallingModule", ModuleType.SCREWDRIVER);
+        redstoneModule = new ItemSonicModule("redstoneModule", ModuleType.SCREWDRIVER, ModuleFunctionType.REDSTONE);
+        blockScanningModule = new ItemSonicModule("blockScanningModule", ModuleType.SCREWDRIVER, ModuleFunctionType.BLOCKSCANNING);
+        mobScanningModule = new ItemSonicModule("mobScanningModule", ModuleType.SCREWDRIVER, ModuleFunctionType.MOBSCANNING);
+        ignitionModule = new ItemSonicModule("ignitionModule", ModuleType.SCREWDRIVER, ModuleFunctionType.IGNITION);
+        toggleDownfallModule = new ItemSonicModule("toggleDownfallModule", ModuleType.SCREWDRIVER, ModuleFunctionType.DOWNFALL);
+        interdictionModule = new ItemSonicModule("interdictionModule", ModuleType.SCREWDRIVER, ModuleFunctionType.INTERDICTION);
+        featherFallingModule = new ItemSonicModule("featherFallingModule", ModuleType.SCREWDRIVER, ModuleFunctionType.FEATHERFALL);
         
         register(ninthSonic);
         register(tenthSonic);

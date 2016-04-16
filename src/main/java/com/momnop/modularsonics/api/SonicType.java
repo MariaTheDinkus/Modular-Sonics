@@ -2,7 +2,7 @@ package com.momnop.modularsonics.api;
 
 public enum SonicType {
 	
-	NINTH ("Ninth Sonic"),
+	NINTHTENTH ("Ninth/Tenth Sonic"),
 	TENTH ("Tenth Sonic");
 	
 	private final String moduleType;
