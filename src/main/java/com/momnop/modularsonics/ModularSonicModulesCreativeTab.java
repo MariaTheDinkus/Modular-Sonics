@@ -7,10 +7,6 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-import com.momnop.interdictionpillar.blocks.BlockHandler;
-import com.momnop.interdictionpillar.info.ModInfo;
-import com.momnop.modularsonics.items.ModularSonicsItems;
-
 public class ModularSonicModulesCreativeTab extends CreativeTabs {
 
 	List list;
@@ -20,10 +16,10 @@ public class ModularSonicModulesCreativeTab extends CreativeTabs {
 		super("sonicModules");
 	}
 
-	@Override
-	public ItemStack getIconItemStack() {
-		return new ItemStack(ModularSonicsItems.redstoneModule);
-	}
+//	@Override
+//	public ItemStack getIconItemStack() {
+//		return new ItemStack(ModularSonicsItems.redstoneModule);
+//	}
 
 	@Override
 	public Item getTabIconItem() {
@@ -31,16 +27,16 @@ public class ModularSonicModulesCreativeTab extends CreativeTabs {
 	}
 
 	@Override
-	public void displayAllReleventItems(List list) {
+	public void displayAllRelevantItems(List list) {
 		this.list = list;
 		
-		this.addItem(ModularSonicsItems.redstoneModule);
-		this.addItem(ModularSonicsItems.blockScanningModule);
-		this.addItem(ModularSonicsItems.mobScanningModule);
-		this.addItem(ModularSonicsItems.ignitionModule);
-		this.addItem(ModularSonicsItems.toggleDownfallModule);
-		this.addItem(ModularSonicsItems.interdictionModule);
-		this.addItem(ModularSonicsItems.featherFallingModule);
+//		this.addItem(ModularSonicsItems.redstoneModule);
+//		this.addItem(ModularSonicsItems.blockScanningModule);
+//		this.addItem(ModularSonicsItems.mobScanningModule);
+//		this.addItem(ModularSonicsItems.ignitionModule);
+//		this.addItem(ModularSonicsItems.toggleDownfallModule);
+//		this.addItem(ModularSonicsItems.interdictionModule);
+//		this.addItem(ModularSonicsItems.featherFallingModule);
 	}
 
 	private void addItem(Item item) {

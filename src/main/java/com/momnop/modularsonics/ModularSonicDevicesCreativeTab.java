@@ -7,10 +7,6 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-import com.momnop.interdictionpillar.blocks.BlockHandler;
-import com.momnop.interdictionpillar.info.ModInfo;
-import com.momnop.modularsonics.items.ModularSonicsItems;
-
 public class ModularSonicDevicesCreativeTab extends CreativeTabs {
 
 	List list;
@@ -20,10 +16,10 @@ public class ModularSonicDevicesCreativeTab extends CreativeTabs {
 		super("sonicDevices");
 	}
 
-	@Override
-	public ItemStack getIconItemStack() {
-		return new ItemStack(ModularSonicsItems.ninthSonic);
-	}
+//	@Override
+//	public ItemStack getIconItemStack() {
+//		//return new ItemStack(ModularSonicsItems.ninthSonic);
+//	}
 
 	@Override
 	public Item getTabIconItem() {
@@ -31,11 +27,11 @@ public class ModularSonicDevicesCreativeTab extends CreativeTabs {
 	}
 
 	@Override
-	public void displayAllReleventItems(List list) {
+	public void displayAllRelevantItems(List list) {
 		this.list = list;
 
-		this.addItem(ModularSonicsItems.ninthSonic);
-		this.addItem(ModularSonicsItems.tenthSonic);
+		//this.addItem(ModularSonicsItems.ninthSonic);
+		//this.addItem(ModularSonicsItems.tenthSonic);
 	}
 
 	private void addItem(Item item) {
